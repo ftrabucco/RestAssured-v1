@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome5",
+  "definitions": {
+    "Welcome5": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "timestamp": {
+          "type": "integer"
+        },
+        "base": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "rates": {
+          "$ref": "#/definitions/Rates"
+        }
+      },
+      "required": [
+        "base",
+        "date",
+        "rates",
+        "success",
+        "timestamp"
+      ],
+      "title": "Welcome5"
+    },
+    "Rates": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "USD": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "USD"
+      ],
+      "title": "Rates"
+    }
+  }
+}
